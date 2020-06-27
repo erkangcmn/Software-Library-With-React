@@ -1,0 +1,30 @@
+.justify-content-between{
+  cursor:pointer;
+  background-color: blue;
+}
+
+h1 {
+  text-align:center;
+}
+
+p {
+  font-size:20px;
+
+}
+
+.plusIcon {
+  cursor:pointer
+}
+
+.addInput{
+
+  display: flex;
+  justify-content: center;
+}
+.npmInstall{
+  
+
+  height: 30px;
+
+}
+
