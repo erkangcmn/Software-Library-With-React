@@ -66,11 +66,11 @@ class Home extends Component {
 
 
         <div className="mt-5">
-
-
+          
           <Row>
             <Col xs={2} className="mt-5">
-              <ListGroup className="mt-4">
+
+              <ListGroup className="mt-4 menu" variant="flush">
                 {
                   getName === "React" ? <ListGroupItem onClick={this.onReactClick} className="justify-content-between active">React </ListGroupItem>
                     : <ListGroupItem onClick={this.onReactClick} className="justify-content-between">React </ListGroupItem>
@@ -92,10 +92,10 @@ class Home extends Component {
               <h1 className="display-4">{
                 istrue ?
                   <span> {headerName}</span>
-                  : <span>Kütüphane </span>
+                  : <span>Yazılım Kütüphanesi</span>
               }</h1>
 
-              <div className="mb-2 bg-info"><h6 className=" npmInstall table">npm i --save
+              <div className="install p-2 mb-3 bg-primary">npm i
               
               {npmArr.map(npm =>{
                 return(
@@ -104,30 +104,22 @@ class Home extends Component {
                 
               }
               )}
-              </h6></div>
+              <span> </span>--save</div>
              
 
-              <table className="table">
-                <thead className="thead-dark">
-                  <tr>
-                    <th scope="col">Adı</th>
-                    <th scope="col">Açıklaması</th>
-                    <th scope="col">URL</th>
-                    <th scope="col">Kullan</th>
-                  </tr>
-
-
-                </thead>
+              <table className="table table-borderless">
                 <tbody>
 
                   {
                     arr.map(i => {
                       return (
                         <tr key={i.id}>
-                          <th scope="row">{i.name}</th>
+
+                          <th scope="row" className="lib-name">
+                            <a href={i.url} target="_blank">{i.name}</a>
+                            </th>
                    
                           <td>{i.info}</td>
-                          <td><a href={i.url}> <button type="button" className="btn btn-outline-danger">Git</button></a></td>
                           <td><button onClick={this.onUseLibClick.bind(this, i)} type="button" className="btn btn-outline-success">Kullan</button></td>
                         </tr>
                       )

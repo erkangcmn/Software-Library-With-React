@@ -6,12 +6,32 @@
 h1 {
   text-align:center;
 }
-
-p {
-  font-size:20px;
-
+.install{
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 15px;
+  display: inline-block;
 }
-
+.menu{
+  font-family: monospace;
+  font-size: 1.4rem;
+}
+.menu div{
+  border-radius: 30px;
+}
+.lib-name{
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+.lib-name a{
+  text-decoration: none;
+  color: black;
+}
+.lib-name a:hover{
+  text-decoration: none;
+  color: gray;
+}
 .plusIcon {
   cursor:pointer
 }
@@ -20,11 +40,5 @@ p {
 
   display: flex;
   justify-content: center;
-}
-.npmInstall{
-  
-
-  height: 30px;
-
 }
 
