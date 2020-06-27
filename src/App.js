@@ -76,18 +76,18 @@ class Home extends Component {
 
   render() {
 
-    const { istrue, headerName, arr, getName, npmArr, saveType } = this.state;
+    const { istrue, headerName, arr, getName, npmArr,saveType } = this.state;
 
     return (
       <>
 
 
         <div className="mt-5">
-
-          {/* __________ List Grup__________ */}
+          
           <Row>
             <Col xs={2} className="mt-5">
-              <ListGroup className="mt-4" onClick={this.onListGroupClick}>
+
+              <ListGroup className="mt-4 menu" variant="flush"onClick={this.onListGroupClick}>
                 {
                   getName === "React" ? 
                     <ListGroupItem id ="react" className="justify-content-between active">React </ListGroupItem>
@@ -107,32 +107,25 @@ class Home extends Component {
               </ListGroup>
 
             </Col>
-
+                
             <Col>
-
-
-              {/* __________ Header__________ */}
               <h1 className="display-4">{
                 istrue ?
                   <span> {headerName}</span>
-                  : <span>Kütüphane </span>
+                  : <span>Yazılım Kütüphanesi</span>
               }</h1>
 
+              <div className="install p-2 mb-3 bg-primary">npm i 
+              
+              {npmArr.map(npm =>{
+                return(
+                  <span className ="ml-2" key={npm.npmLibs.id} >{npm.npmLibs.use}</span>
+                )
+                
+              }
+              )}
+              <span> </span>{saveType}</div>
 
-              {/* __________ Npm i__________ */}
-              <div className="mb-2 bg-info"><h6 className=" npmInstall table">npm i {saveType}
-
-                {npmArr.map(npm => {
-                  return (
-                    <span className="ml-2" key={npm.npmLibs.id} >{npm.npmLibs.use}</span>
-                  )
-
-                }
-                )}
-              </h6></div>
-
-
-              {/* __________ Radio Button__________ */}
               <form onClick={this.onRadioButtonClick}>
                 <div className="form-check form-check-inline">
                   <input className="form-check-input" type="radio" name="npmSave" id="save" value="option1" />
@@ -143,31 +136,21 @@ class Home extends Component {
                   <label className="form-check-label" htmlFor="global">-g</label>
                 </div>
               </form>
+             
 
-
-
-              {/* __________ Table __________ */}
-              <table className="table">
-                <thead className="thead-dark">
-                  <tr>
-                    <th scope="col">Adı</th>
-                    <th scope="col">Açıklaması</th>
-                    <th scope="col">URL</th>
-                    <th scope="col">Kullan</th>
-                  </tr>
-
-
-                </thead>
+              <table className="table table-borderless">
                 <tbody>
 
                   {
                     arr.map(i => {
                       return (
                         <tr key={i.id}>
-                          <th scope="row">{i.name}</th>
 
+                          <th scope="row" className="lib-name">
+                            <a href={i.url} target="_blank">{i.name}</a>
+                            </th>
+                   
                           <td>{i.info}</td>
-                          <td><a href={i.url}> <button type="button" className="btn btn-outline-danger">Git</button></a></td>
                           <td><button onClick={this.onUseLibClick.bind(this, i)} type="button" className="btn btn-outline-success">Kullan</button></td>
                         </tr>
                       )
