@@ -5,14 +5,14 @@
             "name" : "Multer",
             "url"  : "https://github.com/expressjs/multer",
             "info" : "Dosya Uplod",
-            "use"  : "multer"
+            "use"  : " multer"
         },
         {
             "id"   : 2,
             "name" : "Express",
             "url"  : "https://www.npmjs.com/package/express",
             "info" : "Sunucu Oluşturma",
-            "use"  : "express"
+            "use"  : " express"
         }
     ],
 
@@ -22,7 +22,7 @@
             "name" : "Alertifyjs",
             "url"  : "https://www.npmjs.com/package/alertifyjs",
             "info" : "Sağ altta iletişim kutusu çıkar",
-            "use"  : "alertifyjs"
+            "use"  : " alertifyjs"
         },
         {
             "id"   : 4,
