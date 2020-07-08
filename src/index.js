@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Navbar from './components/Navbar';
+
 import * as serviceWorker from './serviceWorker';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'alertifyjs/build/css/alertify.min.css'
+import { Provider } from "react-redux"
+import configureStore from "./redux/reducers/configureStore"
+
+const store = configureStore();
+
 ReactDOM.render(
   <React.StrictMode>
-    <div className="ml-5 mr-5">
-    <Navbar />
-    <App />
-    </div>
+    <Provider store={store} >
+      <App />
+    </Provider>
+
+
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -14,6 +14,14 @@
             "info" : "Sunucu Oluşturma",
             "use"  : " express"
         }
+        ,
+        {
+            "id"   : 7,
+            "name" : "Express",
+            "url"  : "https://www.npmjs.com/package/express",
+            "info" : "Sunucu Oluşturma",
+            "use"  : " express"
+        }
     ],
 
     "react" : [
@@ -28,7 +36,8 @@
             "id"   : 4,
             "name" : "react kütüphanesi ekle 2",
             "url"  : "https://tr.reactjs.org/docs/getting-started.html",
-            "info" : "Tek cümle ile açıklama"
+            "info" : "Tek cümle ile açıklama",
+            "use"  : " express"
         }
     ],
 
@@ -37,13 +46,15 @@
             "id"   : 5,
             "name" : "react native kütüphanesi ekle",
             "url"  : "https://tr.reactjs.org/",
-            "info" : "Tek cümle ile açıklama"
+            "info" : "Tek cümle ile açıklama",
+            "use"  : " express"
         },
         {
             "id"   : 6,
             "name" : "react native kütüphanesi ekle 2",
             "url"  : "https://tr.reactjs.org/docs/getting-started.html",
-            "info" : "Tek cümle ile açıklama"
+            "info" : "Tek cümle ile açıklama",
+            "use"  : " express"
         }
     ]
 
