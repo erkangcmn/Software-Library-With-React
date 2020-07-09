@@ -22,7 +22,7 @@ class SelectedLib extends Component {
 
     render() {
       const {saveType} = this.state;
-      const {libs, istrue} = this.props;
+      const {libs} = this.props;
         return (
           
             <div>

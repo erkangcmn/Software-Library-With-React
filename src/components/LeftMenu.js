@@ -60,7 +60,7 @@ class LeftMenu extends Component {
 function mapStateToProps(state) {
   return {
     data: state.arrDataReducers,
-    getname:state.getNameReducers
+    getName:state.getNameReducers
   }
 }
 
