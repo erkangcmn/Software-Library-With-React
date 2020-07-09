@@ -3,7 +3,7 @@ import Navbar from './components/common/Navbar';
 import { Row, Col } from 'react-bootstrap';
 import Table from './components/Table'
 import LeftMenu from './components/LeftMenu';
-// import SelectedLib from './components/SelectedLib'
+import SelectedLib from './components/SelectedLib'
 import LibHeader from './components/LibHeader';
 import { connect } from "react-redux"
 class Home extends Component {
@@ -26,7 +26,7 @@ class Home extends Component {
 
               <Col>
                 <LibHeader />
-                {/* <SelectedLib /> */}
+                <SelectedLib />
                 <Table />
               </Col>
             </Row>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {connect} from "react-redux"
 class SelectedLib extends Component {
   state ={
     saveType :""
@@ -22,13 +22,16 @@ class SelectedLib extends Component {
 
     render() {
       const {saveType} = this.state;
+      const {libs, istrue} = this.props;
         return (
+          
             <div>
+              
                  <div className="install p-2 mb-3 bg-primary">npm i 
               
-              {npmArr.map(npm =>{
+              {libs.map(npm =>{
                 return(
-                  <span className ="ml-2" key={npm.npmLibs.id} >{npm.npmLibs.use}</span>
+                  <span className ="ml-2" key={npm.id} >{npm.use}</span>
                 )
                 
               }
@@ -50,5 +53,10 @@ class SelectedLib extends Component {
         )
     }
 }
+function mapStateToLibs(state) {
+  return {
+    libs : state.getLibsReducers
+  }
+}
 
-export default SelectedLib
+export default connect(mapStateToLibs)(SelectedLib)

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import alertify from 'alertifyjs'
-import {connect} from "react-redux"
+import { connect } from "react-redux"
 class Table extends Component {
     state = {
-        npmArr : []
+        npmArr: []
     }
     onUseLibClick = (npmLibs, e) => {
 
@@ -12,10 +12,7 @@ class Table extends Component {
         if (AddedLib) {
             alertify.error('Bu kütüphaneyi zaten eklediniz.');
         } else {
-            this.setState({
-                npmArr: [...this.state.npmArr, { npmLibs }]
-            })
-
+            this.props.updateLibs(npmLibs)
             alertify.success('Başarıyla Eklendi');
         }
 
@@ -23,9 +20,9 @@ class Table extends Component {
 
 
     render() {
-        const {language} =this.props;
+        const { language } = this.props;
         return (
-            
+
             <div>
                 <table className="table table-borderless">
                     <tbody>
@@ -40,7 +37,7 @@ class Table extends Component {
                                         </th>
 
                                         <td>{i.info}</td>
-                                        {/* <td><button onClick={this.onUseLibClick.bind(this, i)} type="button" className="btn btn-outline-success">Kullan</button></td> */}
+                                        <td><button onClick={this.onUseLibClick.bind(this, i)} type="button" className="btn btn-outline-success">Kullan</button></td>
                                     </tr>
                                 )
 
@@ -56,9 +53,14 @@ class Table extends Component {
 
 function mapStateToLanguage(state) {
     return {
-      language: state.languageReducers
+        language: state.languageReducers,
     }
-  }
-  
-  
-export default connect(mapStateToLanguage)(Table)
+}
+const mapDispatchToProps = dispatch => ({
+    updateLibs: (libs) => {
+        dispatch({type:"LIBS", payload: libs})
+    }
+
+})
+
+export default connect(mapStateToLanguage, mapDispatchToProps)(Table)

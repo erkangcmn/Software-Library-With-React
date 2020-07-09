@@ -6,6 +6,7 @@ export default {
     DataArr: data,
     SelectedLanguage: [],
     isTrue: false,
-    name: ""
+    name: "",
+    libs: []
 
 }
