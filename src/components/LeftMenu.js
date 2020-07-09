@@ -27,7 +27,7 @@ class LeftMenu extends Component {
 
   }
   render() {
-    const { getName } = this.state;
+    const { getName } = this.props;
 
     return (
 
@@ -59,7 +59,8 @@ class LeftMenu extends Component {
 
 function mapStateToProps(state) {
   return {
-    data: state.arrDataReducers
+    data: state.arrDataReducers,
+    getname:state.getNameReducers
   }
 }
 
