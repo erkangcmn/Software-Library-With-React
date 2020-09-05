@@ -5,32 +5,28 @@ class Table extends Component {
 
     state = {
         libs: [],
-
     }
 
     onUseLibClick = async (npmLibs, e) => {
         this.props.updateLibs(npmLibs)
         alertify.success('Başarıyla Eklendi');
-        this.setState({
-            libs: [...this.state.libs, parseInt(e.target.id)]
-        })
-
-
+    }
+    onRemoveLibClick = (npmLibs) =>{
+        this.props.removeLIBS(npmLibs)
     }
 
 
 
     render() {
 
-        const { libs } = this.state;
-        const { language } = this.props;
+
+        const { language, libs } = this.props;
         return (
 
             <div>
 
                 <table className="table table-borderless">
                     <tbody>
-
 
                         {
                             language.map(i => {
@@ -43,23 +39,27 @@ class Table extends Component {
                                         <td>{i.info}</td>
                                         {libs.length > 0 ?
                                             libs.map(a => {
-
-                                                console.log(libs)
                                                 return (
-                                                    <td key={i.id}>
+                                                    <td>
                                                         <button id={i.id}
-                                                            onClick={this.onUseLibClick.bind(this, i)}
+                                                            onClick={(a.name === i.name) ? this.onRemoveLibClick.bind(this, i): this.onUseLibClick.bind(this, i)}
                                                             type="button"
-                                                            className={a === i.id ? "btn btn-outline-danger" : "btn btn-outline-success"}
-                                                        >
-                                                            {a === i.id ? "Kaldır" : "kullan"}
+                                                            className="btn btn-outline-success">
+                                                            {(a.name === i.name) ? "Kaldır" : "Kullan"}
                                                         </button>
                                                     </td>
                                                 )
-
-                                            })
-                                            : <td><button id={i.id} onClick={this.onUseLibClick.bind(this, i)} type="button" className="btn btn-outline-success">Kullan</button></td>
+                                            }) :
+                                            
+                                            <button id={i.id}
+                                                onClick={this.onUseLibClick.bind(this, i)}
+                                                type="button"
+                                                className="btn btn-outline-success">
+                                                Kullan
+                                            </button>
                                         }
+
+
                                     </tr>
                                 )
 
@@ -82,6 +82,9 @@ function mapStateToLanguage(state) {
 const mapDispatchToProps = dispatch => ({
     updateLibs: (libs) => {
         dispatch({ type: "LIBS", payload: libs })
+    },
+    removeLIBS: (libs) =>{
+        dispatch({ type: "REMOVE_LIBS", payload: libs })
     }
 
 })
