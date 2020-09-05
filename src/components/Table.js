@@ -7,12 +7,16 @@ class Table extends Component {
         libs: [],
     }
 
-    updateLibClick (npmLibs, e) {
+    onUseLibClick=  (npmLibs, e)=> {
          // redux'a eriş. if kontrolü yaz eğer npmLibs o reduxun içinde varsa çıkarttırsın burda.
          // yoksa eklesin
         this.props.updateLibs(npmLibs)
         alertify.success('Başarıyla Eklendi');
        
+    }
+    onRemoveLibClick = (npmLibs) =>{
+        this.props.removeLIBS(npmLibs)
+        alertify.error('Kütüphane Kaldırıldı');
     }
 
     render() {
@@ -35,14 +39,28 @@ class Table extends Component {
                                         </th>
 
                                         <td>{i.info}</td>
-                                        <td>
-                                            <button
-                                                onClick={this.updateLibClick.bind(this, i)}
+                                        {libs.length > 0 ?
+                                            libs.map(a => {
+                                                return (
+                                                    <td>
+                                                        <button id={i.id}
+                                                            onClick={(a.name === i.name) ? this.onRemoveLibClick.bind(this, i): this.onUseLibClick.bind(this, i)}
+                                                            type="button"
+                                                            className="btn btn-outline-success">
+                                                            {(a.name === i.name) ? "Kaldır" : "Kullan"}
+                                                        </button>
+                                                    </td>
+                                                )
+                                            }) :
+                                            
+                                            <button id={i.id}
+                                                onClick={this.onUseLibClick.bind(this, i)}
                                                 type="button"
                                                 className="btn btn-outline-success">
-                                                Kaldır
+                                                Kullan
                                             </button>
-                                        </td>
+                                        }
+
                                     </tr>
                                 )
 
