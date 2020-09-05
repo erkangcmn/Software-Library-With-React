@@ -6,7 +6,6 @@ class SelectedLib extends Component {
   }
 
   onRadioButtonClick = (e) => {
-
     if (e.target.id === "save") {
       this.setState({
         saveType: " --save"
@@ -24,9 +23,9 @@ class SelectedLib extends Component {
       const {saveType} = this.state;
       const {libs} = this.props;
         return (
-          
+      
             <div>
-              
+         
                  <div className="install p-2 mb-3 bg-primary">npm i 
               
               {libs.map(npm =>{
@@ -55,6 +54,7 @@ class SelectedLib extends Component {
 }
 function mapStateToLibs(state) {
   return {
+    
     libs : state.getLibsReducers
   }
 }

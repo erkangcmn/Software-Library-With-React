@@ -5,7 +5,8 @@ import initialState from "./initialState";
 export default function getLibsReducers(state = initialState.libs, action) {
     switch (action.type) {
         case actionTypes.LIBS:
-            return  [action.payload];
+            
+            return [...state, action.payload];
 
         default:
             return state;

@@ -5,13 +5,10 @@ import Table from './components/Table'
 import LeftMenu from './components/LeftMenu';
 import SelectedLib from './components/SelectedLib'
 import LibHeader from './components/LibHeader';
-import { connect } from "react-redux"
 class Home extends Component {
 
 
   render() {
-    const { data } = this.props;
-    const result = Object.values(data);
     return (
       <>
         <div className="ml-5 mr-5">
@@ -38,10 +35,6 @@ class Home extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    data: state.arrDataReducers
-  }
-}
 
-export default connect(mapStateToProps)(Home)
+
+export default Home
