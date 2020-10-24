@@ -4,9 +4,20 @@ import { connect } from "react-redux";
 
 class LeftMenu extends Component {
   state = {
+    firstLoad: true,
     isTrue: false,
     getName: "",
   };
+
+  componentDidMount(){
+    if(this.state.firstLoad){
+      this.setState({
+        firstLoad: false
+      })
+      this.props.updateName("React");
+      this.props.updateLanguage(this.props.data.react);
+    }
+  }
 
   onListGroupClick = (e) => {
     this.props.updateIsTrue(true);
