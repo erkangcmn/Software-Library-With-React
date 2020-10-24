@@ -7,7 +7,7 @@ class LibHeader extends Component {
     return (
       <div>
         <h1 className="display-4">
-          {istrue ? <span>{getname}</span> : <span>Yazılım Kütüphanesi</span>}
+          <span>{getname}</span>
         </h1>
       </div>
     );
