@@ -1,105 +1,103 @@
 {
-    "nodejs" : [
+    "nodeJS" : [
         {
             "id"   : 1,
             "name" : "Multer",
             "url"  : "https://github.com/expressjs/multer",
-            "info" : "Dosya Uplod",
+            "info" : "Express'te kullanabileceğiniz dosya yükleme modülü",
             "use"  : " multer"
         },
         {
             "id"   : 2,
             "name" : "Express",
             "url"  : "https://www.npmjs.com/package/express",
-            "info" : "Sunucu Oluşturma",
-            "use"  : " express"
-        }
-        ,
-        {
-            "id"   : 3,
-            "name" : "Express",
-            "url"  : "https://www.npmjs.com/package/express",
-            "info" : "Sunucu Oluşturma",
+            "info" : "NodeJS'in popüler web uygulaması yönetim kütüphanesi",
             "use"  : " express"
         }
     ],
-
     "react" : [
         {
-            "id"   : 4,
+            "id"   : 3,
             "name" : "Alertifyjs",
             "url"  : "https://www.npmjs.com/package/alertifyjs",
-            "info" : "Sağ altta iletişim kutusu çıkar",
+            "info" : "Bildirim kutucuğu",
             "use"  : " alertifyjs"
         },
         {
-            "id"   : 5,
+            "id"   : 4,
             "name" : "React-bootstrap",
             "url"  : "https://www.npmjs.com/package/react-bootstrap",
-            "info" : "react'ın bootstrapı",
+            "info" : "React Bootstrap kütüphanesi",
             "use"  : " react-bootstrap"
         },
         {
-            "id"   : 6,
+            "id"   : 5,
             "name" : "Font Awesome",
             "url"  : "https://www.npmjs.com/package/@fortawesome/react-fontawesome",
-            "info" : "Font awesome (ikonlar)",
+            "info" : "Popüler ikon kütüphanesi",
             "use"  : " @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/fontawesome-svg-core"
         },
         {
-            "id"   : 7,
+            "id"   : 6,
             "name" : "React Redux",
             "url"  : "https://www.npmjs.com/package/react-redux",
-            "info" : "Redux mağazasından verileri okumasına ve verileri güncellemek için eylemleri mağazaya göndermesine olanak tanır.",
+            "info" : "Redux mağazasından verileri okumasına ve verileri güncellemek için eylemleri mağazaya göndermesine olanak tanır",
             "use"  : " react-redux"
         },
         {
-            "id"   : 8,
+            "id"   : 7,
             "name" : "Redux",
             "url"  : "https://react-redux.js.org/introduction/quick-start",
-            "info" : "Redux mağazasını uygulamanızın geri kalanı için kullanılabilir hale getirir",
+            "info" : "Global State yönetimi",
             "use"  : " redux"
         },
         {
-            "id"   : 9,
+            "id"   : 8,
             "name" : "React Router Dom",
             "url"  : "https://www.npmjs.com/package/react-router-dom",
             "info" : "React Router Dom sayfa oluşturmakta Kullanılır",
             "use"  : " react-router-dom"
         },
         {
-            "id"   : 10,
+            "id"   : 9,
             "name" : "Axios",
             "url"  : "https://www.npmjs.com/package/axios",
-            "info" : "Sunucu bağlantılarında kullanılır",
+            "info" : "İnternet'e GET, POST, PUT, DELETE gibi istekler atabilmenizi sağlar",
             "use"  : " axios"
         },
         {
-            "id"   : 11,
-            "name" : "React WebSoket",
+            "id"   : 10,
+            "name" : "React WebSocket",
             "url"  : "https://www.npmjs.com/package/react-websocket",
-            "info" : "Canlı chat sistemi için gerekli",
+            "info" : "Socket bağlantısı kurabilirsiniz, genelde canlı sohbet uygulamaları için kullanılır",
             "use"  : " react-websocket"
         }
     ],
 
-    "reactNat" : [
+    "reactNative" : [
         {
-            "id"   : 12,
-            "name" : "react native kütüphanesi ekle",
-            "url"  : "https://tr.reactjs.org/",
-            "info" : "Tek cümle ile açıklama",
-            "use"  : " express"
+            "id"   : 6,
+            "name" : "React Redux",
+            "url"  : "https://www.npmjs.com/package/react-redux",
+            "info" : "Redux mağazasından verileri okumasına ve verileri güncellemek için eylemleri mağazaya göndermesine olanak tanır",
+            "use"  : " react-redux"
         },
         {
-            "id"   : 13,
-            "name" : "react native kütüphanesi ekle 2",
-            "url"  : "https://tr.reactjs.org/docs/getting-started.html",
-            "info" : "Tek cümle ile açıklama",
-            "use"  : " express"
+            "id"   : 9,
+            "name" : "Axios",
+            "url"  : "https://www.npmjs.com/package/axios",
+            "info" : "İnternet'e GET, POST, PUT, DELETE gibi istekler atabilmenizi sağlar",
+            "use"  : " axios"
+        },
+        {
+            "id"   : 11,
+            "name" : "React Native Localization",
+            "url"  : "https://www.npmjs.com/package/react-native-localization",
+            "info" : "Uygulamanızın birden fazla dilde kullanılabilmesini sağlar",
+            "use"  : " react-native-localization"
         }
     ]
-
+    
 
 
 

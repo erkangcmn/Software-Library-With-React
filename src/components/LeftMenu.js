@@ -26,10 +26,10 @@ class LeftMenu extends Component {
       this.props.updateLanguage(this.props.data.react);
       this.props.updateName("React");
     } else if (e.target.id === "nodejs") {
-      this.props.updateLanguage(this.props.data.nodejs);
+      this.props.updateLanguage(this.props.data.nodeJS);
       this.props.updateName("NodeJS");
     } else {
-      this.props.updateLanguage(this.props.data.reactNat);
+      this.props.updateLanguage(this.props.data.reactNative);
       this.props.updateName("React Native");
     }
   };
