@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+
 class SelectedLib extends Component {
   state = {
     saveType: "",
@@ -25,15 +27,23 @@ class SelectedLib extends Component {
         <div className="install p-2 mb-3 bg-primary">
           npm i
           {libs.map((npm) => {
-            return (
-              <span className="ml-2" key={npm.id}>
-                {npm.use}
-              </span>
-            );
-          })}
+          return (
+            <span className="ml-2" key={npm.id}>
+              {npm.use}
+            </span>
+          );
+        })}
           <span> </span>
           {saveType}
         </div>
+
+        <CopyToClipboard text={'npm i' + libs.map((npm) => {
+          return (
+            npm.use
+          );
+        })}>
+          <button>Copy to clipboard</button>
+        </CopyToClipboard>
 
         <form onClick={this.onRadioButtonClick}>
           <div className="form-check form-check-inline">
