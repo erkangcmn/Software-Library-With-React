@@ -42,7 +42,7 @@ class SelectedLib extends Component {
             npm.use
           );
         })}>
-          <button>Copy to clipboard</button>
+          <button onClick={() => alert("Command copied to clipboard!")}>Copy to clipboard</button>
         </CopyToClipboard>
 
         <form onClick={this.onRadioButtonClick}>
